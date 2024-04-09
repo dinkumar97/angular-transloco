@@ -1,0 +1,12 @@
+<ng-container *ngIf="!helperType">
+    <div *transloco="let t">
+        <div *ngFor="let item of object | keyvalue">
+            {{t(item.value)}}
+        </div>
+    </div>
+</ng-container>
+<ng-container *ngIf="helperType">
+    <div *ngFor="let item of object | keyvalue">
+        {{item.value|helper : constValue}}
+    </div>
+</ng-container>

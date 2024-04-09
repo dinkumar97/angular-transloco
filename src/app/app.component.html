@@ -1,0 +1,9 @@
+<button (click)="showData = !showData">load</button>
+<button (click)="switchLang()"> Switch lang</button>
+<div class="container">
+  <ng-container *ngIf="showData">
+    <ng-container *ngFor="let i of 100 | rangeGenerator">
+      <app-render></app-render>
+    </ng-container>
+  </ng-container>
+</div>

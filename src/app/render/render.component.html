@@ -1,0 +1,24 @@
+<ng-container *ngIf="!helperType">
+    <div *transloco="let t">
+        <div *ngFor="let item of object | keyvalue">
+            {{t(item.value)}}
+        </div>
+    </div>
+</ng-container>
+<ng-container *ngIf="helperType">
+    <div *ngFor="let item of object | keyvalue">
+        {{item.value|helper : constValue}}
+    </div>
+</ng-container>
+
+
+
+<app-render1 [helperType]="helperType"></app-render1>
+<app-render2 [helperType]="helperType"></app-render2>
+<app-render3 [helperType]="helperType"></app-render3>
+<app-render4 [helperType]="helperType"></app-render4>
+<app-render5 [helperType]="helperType"></app-render5>
+<app-render6 [helperType]="helperType"></app-render6>
+<app-render7 [helperType]="helperType"></app-render7>
+<app-render8 [helperType]="helperType"></app-render8>
+<app-render9 [helperType]="helperType"></app-render9>
